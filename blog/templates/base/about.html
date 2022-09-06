@@ -1,0 +1,109 @@
+{% extends 'base/base.html' %} {% load static %}{% block contend %}
+
+<main id="main">
+  <!-- ======= Intro Single ======= -->
+  <section class="intro-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-4">
+          <nav
+            aria-label="breadcrumb"
+            class="breadcrumb-box d-flex justify-content-lg-end"
+          >
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'home' %}">Inicio</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Sobre Mí
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Intro Single-->
+
+  <!-- ======= About Section ======= -->
+  <section class="section-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 position-relative">
+          <div class="about-img-box">
+            <img
+              src="{% static 'src/img/orlando.jpg' %}"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <div class="sinse-box">
+            <h3 class="sinse-title">
+              Orlando Diaz
+
+              <br />
+              Sinse 1999
+            </h3>
+            <p>Backend Developer & Systems engineering</p>
+          </div>
+        </div>
+        <div class="col-md-12 section-t8 position-relative">
+          <div class="row">
+            <div class="col-md-6 col-lg-5">
+              <img
+                src="{% static 'src/img/orlando1.jpg' %}"
+                alt=""
+                class="img-fluid"
+                style="height: 560px; width: 450px;"
+              />
+            </div>
+
+            <div class="col-md-6 col-lg-5 section-md-t3">
+              <div class="title-box-d">
+                <h1>
+                  Orlando Luis Diaz Diaz
+                </h1>
+              </div>
+              <p class="color-text-a" style="margin-top: 90px;">
+                Estudiante de ingeniería de sistemas en la universidad de la
+                guajira con terminación académica. Fundador de OTECH SOFTWARE &
+                SYSTEMS, mentor y creador de sistema ERP CONSTRURIOAPP. Abarco
+                experiencia empresarial en proyectos profesionales en desarrollo
+                web backend, APIS, y diseño web. Apasionado y adaptado a
+                cualquier reto, junto con mi carisma y positivismo por mi
+                carrera, ansío aprender nuevas experiencias cada día más.
+              </p>
+              <p class="color-text-a">
+                <b>Teléfono:</b>
+                300 493 8890
+                <br />
+                <b>E-mail:</b>
+                orlandoluisdiazdiaz@gmail.com
+                <br />
+                <b>E-Github:</b>
+                <a target="_blank" href="https://github.com/orlandod1">
+                  orlandod1
+                </a>
+
+                <br />
+                <b>Instagram:</b>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/orlandodiazd_/"
+                >
+                  orlandodiazd_
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======Team Section ======= -->
+
+  <!-- End About Section-->
+</main>
+<!-- End #main -->
+{% endblock %}

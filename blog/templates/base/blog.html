@@ -1,0 +1,83 @@
+{% extends 'base/base.html' %} {% load static %}{% block contend %}
+<main id="main">
+  <!-- ======= Intro Single ======= -->
+  <section class="intro-single">
+    <div class="container">
+      <div class="col-md-4 text-center">
+        <a href="">
+          <button type="submit" class="btn btn-a">
+            añadir blog
+          </button>
+        </a>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-4">
+          <nav
+            aria-label="breadcrumb"
+            class="breadcrumb-box d-flex justify-content-lg-end"
+          >
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'home' %}">Inicio</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Blogs
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Intro Single-->
+
+  <!-- ======= Property Grid ======= -->
+  <section class="property-grid grid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12"></div>
+        <!-- {%if propiedades %} {%for p in propiedades%} -->
+
+        <div class="col-md-4">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <!-- {% if p.imagen %}
+              <img src="{{p.imagen.url}}" alt="" class="img-a img-fluid" />
+              {% endif %} -->
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#">
+                      <br />
+                      <!-- {{p.nombre}} -->
+                    </a>
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <!-- <span class="price-a">$ {{p.precio}}</span> -->
+                  </div>
+                  <a href="" class="link-a">
+                    Click here to view
+                    <span class="bi bi-chevron-right"></span>
+                  </a>
+                  <br />
+                  <a href="#" class="link-a">
+                    Editar
+                    <span class="bi bi-chevron-right"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- {%endfor%}{%endif%} -->
+      </div>
+    </div>
+  </section>
+
+  <!-- End Property Grid Single-->
+</main>
+{% endblock %}
