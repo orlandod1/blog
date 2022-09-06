@@ -97,7 +97,7 @@
                 Blog
               </a>
             </li>
-
+            {% if user.is_authenticated %}
             <li class="nav-item">
               <button
                 style="
@@ -106,11 +106,36 @@
                   background-color: #000000;
                 "
               >
-                <a class="nav-link" href="" style="color: #ffffff;">
+                <a
+                  class="nav-link"
+                  href="{% url 'login:logout' %}"
+                  role="button"
+                  style="color: white;"
+                >
                   Cerrar sesion
                 </a>
               </button>
             </li>
+            {% else %}
+            <li class="nav-item">
+              <button
+                style="
+                  border-radius: 10px;
+                  text-decoration: none;
+                  background-color: #000000;
+                "
+              >
+                <a
+                  class="nav-link"
+                  href="{% url 'login:login' %}"
+                  role="button"
+                  style="color: white;"
+                >
+                  Iniciar sesion
+                </a>
+              </button>
+            </li>
+            {% endif %}
           </ul>
         </div>
       </div>
@@ -158,8 +183,6 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-           
-          
             <div class="copyright-footer">
               <p class="copyright color-text-a">
                 &copy; Copyright

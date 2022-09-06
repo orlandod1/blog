@@ -1,4 +1,5 @@
 {% load static %} {% block contend %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -72,39 +73,17 @@
           <br />
           <br />
           <br />
-          <form>
+          <form action="" method="post" class="signin-form">
+            {% csrf_token %}
+        
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <input
-                type="email"
-                id="loginName"
-                class="form-control"
-                style="width: 400px; margin-left: 445px;"
-              />
-              <label
-                class="form-label"
-                for="loginName"
-                style="color: black; margin-left: 445px;"
-              >
-                Email or username
-              </label>
+              {{ form.username|add_class:'form-control'|attr:'autocomplete:off'|attr:'placeholder:Ingrese su username' }}
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-4">
-              <input
-                type="password"
-                id="loginPassword"
-                class="form-control"
-                style="width: 400px; margin-left: 445px;"
-              />
-              <label
-                class="form-label"
-                for="loginPassword"
-                style="color: black; margin-left: 445px;"
-              >
-                Password
-              </label>
+              {{ form.password|add_class:'form-control'|attr:'autocomplete:off'|attr:'placeholder:Ingrese su password' }}
             </div>
 
             <!-- 2 column grid layout -->
